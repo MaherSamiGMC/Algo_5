@@ -1,0 +1,18 @@
+ALGORITHM Insertion sort
+VAR
+    arr : ARRAY_OF INTEGER[50];
+    i,j:INTEGER:=0;
+    x:INTEGER:=0;
+
+BEGIN
+    Read(arr[0]);
+    FOR i FROM 1 TO arr.length-1 DO
+        Read(arr[i]);
+        x:=arr[i]
+        FOR j FROM i-1 TO 0 STEP -1 DO
+            IF (x<arr[j]) THEN
+                swap(x,arr[j]);
+            END_IF
+        END_FOR
+    END_FOR
+END
